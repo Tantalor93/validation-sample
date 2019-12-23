@@ -1,11 +1,16 @@
 package com.github.tantalor93.dto;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Positive;
+
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Sample {
 
+	@NotEmpty
 	private String sampleString;
+	@Positive
 	private Integer sampleNumber;
 
 	@JsonCreator

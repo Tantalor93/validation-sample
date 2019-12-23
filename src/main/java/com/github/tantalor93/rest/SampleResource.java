@@ -22,7 +22,7 @@ public class SampleResource {
 	}
 
 	@PostMapping("/sample")
-	public void createSample(@RequestBody Sample sample) {
+	public void createSample(@Valid @RequestBody Sample sample) {
 		LOGGER.info("received '{}'", sample);
 	}
 }
