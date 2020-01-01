@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Sample {
 
-	@NotEmpty
+	@NotEmpty(message = "{sampleString.notEmpty}")
 	private String sampleString;
 	@Positive
 	private Integer sampleNumber;
