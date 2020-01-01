@@ -1,16 +1,16 @@
 package com.github.tantalor93.dto;
 
 import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Positive;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.github.tantalor93.validation.CoolNumber;
 
 public class Sample {
 
 	@NotEmpty(message = "{sampleString.notEmpty}")
 	private String sampleString;
-	@Positive
+	@CoolNumber
 	private Integer sampleNumber;
 
 	@JsonCreator
